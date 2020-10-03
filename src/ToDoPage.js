@@ -35,8 +35,8 @@ function ToDoPage({user}){
 
     db.collection(user.displayName.trim()).add({
         todo:input,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        time:new Date().toLocaleString()
     });
 
     setInput('');
@@ -77,6 +77,14 @@ function ToDoPage({user}){
                                 <span className="edit-todo" onClick={editTodo}>
                                 <i class="fas fa-edit"></i>
                                 </span>
+
+                                <span className="todo-time">
+                                     
+                                         {todoObj.data.time}
+
+                                </span>
+
+
                               </li>
                              )
                         })
