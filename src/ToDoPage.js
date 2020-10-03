@@ -67,7 +67,9 @@ function ToDoPage({user}){
       
       if (newToDo) {
          db.collection(user.displayName).doc(todoId).set({
-             todo:newToDo
+             todo:newToDo,
+             time:new Date().toLocaleString()
+
          },{merge:true})
       }
    }
