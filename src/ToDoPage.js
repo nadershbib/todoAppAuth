@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import db from './firebase';
 import './ToDoPage.css';
 import firebase from 'firebase'
-
+import Swal from 'sweetalert2'
 function ToDoPage({user}){ 
 
    const [input,setInput] = useState("");
@@ -49,8 +49,27 @@ function ToDoPage({user}){
   }
 
 
-   const editTodo = ()=>{
+   const editTodo = async (todoId)=>{
 
+    const inputValue = '';
+
+    const { value: newToDo } = await Swal.fire({
+        title: 'Update your ToDo',
+        input: 'text',
+        inputValue: inputValue,
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return 'You did not update your ToDo!'
+          }
+        }
+      })
+      
+      if (newToDo) {
+         db.collection(user.displayName).doc(todoId).set({
+             todo:newToDo
+         },{merge:true})
+      }
    }
 
     return (
@@ -74,7 +93,7 @@ function ToDoPage({user}){
                                 <span className="delete-icon" onClick={()=>deleteItem(todoObj.id)}>
                                   <i class="fas fa-trash-alt"></i>
                                 </span>
-                                <span className="edit-todo" onClick={editTodo}>
+                                <span className="edit-todo" onClick={()=>editTodo(todoObj.id)}>
                                 <i class="fas fa-edit"></i>
                                 </span>
 
