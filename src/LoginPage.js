@@ -1,5 +1,6 @@
 import React from 'react';
-import './LoginPage.css';
+// import './LoginPage.css';
+import  './LoginPage.scss'
 import {auth,provider} from './firebase';
 
 

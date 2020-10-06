@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import db from './firebase';
-import './ToDoPage.css';
+// import './ToDoPage.css';
+import './ToDoPage.scss'
 import firebase from 'firebase'
 import Swal from 'sweetalert2'
 function ToDoPage({user}){ 
