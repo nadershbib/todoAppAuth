@@ -3,7 +3,7 @@
 <h1>Overview</h1>
 
 <p>
-   This full stack application mainly aims to let the users when they login with their Gmail account to add,read,update, and delete Todos tasks. MoreOver, everytime a todo task is    added it gets displayed with the actual date and time it has been created.
+   This full stack application mainly aims to let the users when they login with their Gmail account to add,read,update, and delete Todos tasks. Moreover, everytime a todo task is    added it gets displayed with the actual date and time it has been created.
 </p>
 
 
