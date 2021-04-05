@@ -12,7 +12,7 @@
 <ul>
   <li> <h3>React</h3> </li>
   <li> <h3>SASS</h3> </li>
-  <li> <h3>Firebase </h3> <li>
+  <li> <h3>Firebase </h3> </li>
   <li> <h3> Firebase Gmail auth </h3> </li>
   <li> <h3> SweetAlert library </h3> </li>
 </ul>  
