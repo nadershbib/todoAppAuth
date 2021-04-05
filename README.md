@@ -1,8 +1,8 @@
 <h1> <a href="https://todoappauth-7acab.web.app/">Your Todos </a></h1>
 
-<img src="./ToDos.png" width="30%"/>
-<img src="./mainTodo.png" width="30%" />
-<img src="./updateTodo.png" width="30%" />
+<img src="./Todos.png" />
+<img src="./mainTodo.png"  />
+<img src="./updateTodo.png" />
 
 <h1>Overview</h1>
 
